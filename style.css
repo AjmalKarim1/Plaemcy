@@ -1,0 +1,156 @@
+.amount-box {
+  border-radius: 16px;
+  padding: 15px;
+  margin: 8px 0;
+  box-shadow: 0 0 15px #599eec inset;
+  text-align: center;
+}
+.amount-name {
+  font-size: 21px;
+  font-weight: 400;
+  color: #666666;
+  margin-bottom: 18px;
+}
+.amount-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  background-color: #3a8ae3;
+  border-radius: 9px;
+  background-size: contain;
+}
+.amount-money {
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: 900;
+  color: #3a8ae3;
+}
+.amount-remark {
+  font-size: 16px;
+  font-weight: 400;
+  color: #999999;
+}
+.cell {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #e5e5e5;
+  border-radius: 50px;
+  padding: 15px;
+  align-items: center;
+  overflow: hidden;
+  margin: 8px 0;
+}
+.cell-item-left {
+  max-width: 50%;
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+}
+.cell-item-right {
+  flex: 1;
+  padding-left: 10px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+}
+.cell-item-right input {
+  border: none;
+  padding: 4px 4px;
+  font-size: inherit;
+}
+
+.cell-item-right input:focus {
+  outline: none;
+}
+.repay-btn-box {
+  display: flex;
+  align-items: stretch;
+}
+.repay-btn {
+  margin: 5px;
+  flex: 1;
+  border-radius: 23px;
+  background: #3a8ae3;
+  position: relative;
+  padding: 5px;
+}
+.repay-btn button {
+  width: 100%;
+  border: none;
+  padding: 14px 5px;
+  border-radius: 23px;
+}
+.repay-btn button span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #4d4bb1;
+}
+.repay-btn:nth-child(1) p {
+  font-weight: bold;
+}
+.repay-btn p {
+  font-size: 14px;
+  color: black;
+  padding: 8px 2px;
+}
+.dh-safe {
+  position: absolute;
+  left: -7px;
+  top: -10px;
+  width: 50px;
+}
+.dh-click {
+  position: absolute;
+  right: 15px;
+  bottom: 3px;
+  width: 37px;
+  animation-name: scaleDraw-c1bc7314;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+}
+
+.repay-btn-button.active {
+  background-color: #3a8ae3;
+  color: white;
+}
+
+.repay-btn-button {
+  background-color: #f8f8f8;
+  color: #3a8ae3;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.repay-btn-button.inactive {
+  background-color: #f8f8f8;
+  color: #3a8ae3;
+}
+
+#discountedRepayment {
+  background-color: #200d8d;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+#directRepayment {
+  background-color: #fff;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#discountedRepayment.active,
+#directRepayment.active {
+  background-color: #3a8ae3;
+  color: white;
+}
+
+#discountedRepayment.inactive,
+#directRepayment.inactive {
+  background-color: #fff;
+  color: #3a8ae3;
+}
