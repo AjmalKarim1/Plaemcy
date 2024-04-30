@@ -90,7 +90,7 @@ body {
 .repay-btn button span {
   font-size: 12px;
   font-weight: bold;
-  color: #4d4bb1;
+  color: #f1f1f1;
 }
 .repay-btn:nth-child(1) p {
   font-weight: bold;
@@ -120,7 +120,16 @@ body {
 
 .repay-btn-button.active {
   background-color: #3a8ae3;
-  color: white;
+}
+#discountedRepayment:active,
+#directRepayment:active {
+  background-color: #ffffff;
+}
+span .repayMent {
+  color: #3a8ae3;
+}
+.repay-btn-button .repayMent {
+  color: blue;
 }
 .page-repay .repay-btn-box {
   display: flex;
@@ -139,17 +148,19 @@ body {
 }
 
 #discountedRepayment {
-  background-color: #200d8d;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  border: 1px solid #9d9696;
 }
 
 #directRepayment {
-  background-color: #fff;
   color: black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 102px;
+  border: 1px solid #6c6363;
 }
 
 #discountedRepayment.active,
@@ -227,7 +238,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(21, 171, 238);
 }
 .payment_sec {
   display: block;
