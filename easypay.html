@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Plaemcy</title>
+  </head>
+  <body>
+    <section class="payment_sec">
+      <div class="header">EasyPay</div>
+
+      <div class="content">
+        <div class="amountDiv">
+          <div class="amountInfo">
+            <p class="amount" id="amountVal">32605.00</p>
+            <p>Amount Payable</p>
+          </div>
+          <button class="copyBUt" data-clipboard-text="32605">Copy</button>
+        </div>
+      </div>
+      <div class="paymentContent">
+        <ul class="tabBar" style="display: none;">
+          <li class="select" data-index="upiContent" id="upiContentDiv" data-url="inpay://com.omnipotent/main?pa=No%20Account&amp;orderid=I240430001045671333788388507699&amp;am=32605.00&amp;tr=00hw2&amp;tn=00hw2&amp;version=2.2.2&amp;cardName=EasyPay&amp;cardNo=00000000&amp;ifsc=00000000&amp;bankName=default&amp;is_bank=0">UPI</li>
+          <li data-index="scanCode" id="scanCode" data-url="">Qr Code</li>
+          <li data-index="accountContent" id="accountContentDiv" data-url="inpay://com.omnipotent/main?pa=No%20Account&amp;orderid=I240430001045671333788388507699&amp;am=32605.00&amp;tr=00hw2&amp;tn=00hw2&amp;version=2.2.2&amp;cardName=EasyPay&amp;cardNo=00000000&amp;ifsc=00000000&amp;bankName=default&amp;is_bank=1">Bank account details</li>
+      </ul>
+      <div class="upiContent" style="display: none;">
+          <div class="contentDiv">
+              <p class="title">1. Copy the below given UPI</p>
+              <div class="upiInputDiv">
+                  <span type="text" class="upiInput" id="upiInput">No Account</span><button class="upiBut" data-clipboard-text="No Account" id="upiCopyBut">Copy</button>
+              </div>
+              <p class="hint">Tip: Dont save the UPI, the UPI change every hour. get new UPI every time.</p>
+          </div>
+          <div class="contentDiv">
+              <p class="title">2. Choose upi app for payment</p>
+              <div class="paymentDiv">
+                  
+              <div class="paylist">
+                  <img src="static/image/googlepay.png" class="selectImg" data-index="googlepay" style="border-color: rgb(21,171,238);">  
+                 
+                  <img src="static/image/phonepe.png" class="rightImg selectImg" data-index="phonepe">
+              </div>
+              <div class="paylist" style="margin-top: 5rem;">
+                  <img src="static/image/paytm.png" class="selectImg" data-index="paytm">  
+                  <img src="static/image/other.png" class="rightImg selectImg" data-index="other">
+              </div>
+              </div>
+              <p class="hint">Tip: If the app won't appear, go to the app and transfer the amount after
+                  copying
+                  the UPI id.</p>
+
+          </div>
+          <div class="contentDiv">
+              <p class="title"> 3. Need to enter your 12 Ref No (UTR)</p>
+              <div class="refnumDiv">
+                  Ref No.<input type="number" class="refnum" placeholder="Ref No is required">
+                  <img src="static/image/help.png" alt="what is UTR" style="height: .8rem" id="help">
+              </div>
+
+          </div>
+          <div class="contentDiv">
+
+              <button class="submitBut disabled">Submit</button>
+          </div>
+          <div class="contentDiv">
+           
+          </div>
+          <div class="paymentCheck">
+              <p class="paymentTitle" style=" color: rgb(21,171,238);">Payment in progress</p> 
+              <p> <marquee>please do not refresh...</marquee> </p>
+              <span class="closePayment"> <img src="static/image/close.png">  </span>
+              <span class="downTime">05:00</span>
+          </div>
+      </div>
+      <div class="qrCodeContent" style="display: none;">
+          <div class="contentDiv">
+              <p class="title">1. Scan QR code</p>
+              <div class="QrDiv">
+                 
+              </div>
+              <p class="hint">Tip: Please use the payment app to scan the QR code.</p>
+          </div>
+        
+          <div class="contentDiv">
+              <p class="title"> 2. Need to enter your 12 Ref No (UTR)</p>
+              <div class="refnumDiv">
+                  Ref No.<input type="number" class="refnum" placeholder="Ref No is required">
+                  <img src="static/image/help.png" alt="what is UTR" style="height: .8rem" id="help">
+              </div>
+
+          </div>
+          <div class="contentDiv">
+
+              <button class="submitBut disabled">Submit</button>
+          </div>
+         
+          <div class="contentDiv">
+           
+          </div>
+      </div>
+      <!---  Bank account detail  -->
+      <div class="accountContent">
+          <div class="contentDiv">
+              <p class="title">1.Copy Bank details</p>
+              <div class="upiInputDiv">
+                  <span class="textHead">Name:</span><span class="upiInput" id="accountName">EasyPay</span><button class="upiBut" id="accountNameBut" data-clipboard-text="EasyPay">Copy</button>
+              </div>
+              <div class="upiInputDiv">
+                  <span class="textHead">CardNo:</span><span type="text" class="upiInput" id="accountNumber">00000000</span><button class="upiBut" id="accountNumberBut" data-clipboard-text="00000000">Copy</button>
+              </div>
+              <div class="upiInputDiv">
+                  <span class="textHead">IFSC:</span><span type="text" class="upiInput" id="accountIfsc">00000000</span><button class="upiBut" id="accountIfscBut" data-clipboard-text="00000000">Copy</button>
+              </div>
+              <div class="upiInputDiv">
+                  <span class="textHead" style="width: 5rem;">Bank Name:</span><span type="text" class="upiInput" id="bankName">default</span>
+              </div>
+
+          </div>
+          <div class="contentDiv">
+              <p class="title">2. Login to online banking/wallet, make a transfer to the bank account. </p>
+              <div class="paymentDiv">
+                  <p class="text">Transfer the money to the bank account</p>
+              </div>
+              <p class="hint">Please don't save this "Account number" for future pavments. The account number
+                  mav
+                  change anytime.</p>
+
+          </div>
+          <div class="contentDiv">
+              <p class="title">3. Need to enter your Ref No (UTR)</p>
+              <div class="refnumDiv">
+                  Ref No.<input type="number" class="refnumBank" placeholder="Ref No is required">
+                  <img src="assets/help.png" alt="what is UTR" style="height: .8rem" id="help">
+              </div>
+
+          </div>
+          <div class="contentDiv">
+
+              <button class="submitButBank disabled">Submit</button>
+          </div>
+         
+      </div>
+  </div>
+      </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

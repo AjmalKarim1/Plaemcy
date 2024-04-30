@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .amount-box {
   border-radius: 16px;
   padding: 15px;
@@ -117,6 +122,10 @@
   background-color: #3a8ae3;
   color: white;
 }
+.page-repay .repay-btn-box {
+  display: flex;
+  align-items: stretch;
+}
 
 .repay-btn-button {
   background-color: #f8f8f8;
@@ -153,4 +162,277 @@
 #directRepayment.inactive {
   background-color: #fff;
   color: #3a8ae3;
+}
+.tips {
+  font-size: 15px;
+  font-weight: 400;
+  color: #d42355;
+  margin: 15px 0;
+  display: block;
+}
+.tips span {
+  font-weight: bold;
+}
+.page-repay .cell {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #e5e5e5;
+  border-radius: 50px;
+  padding: 15px;
+  align-items: center;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.input-field {
+  border: none;
+  padding: 8px 12px;
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+
+  border-radius: 4px;
+}
+
+.input-field:focus {
+  outline: none;
+}
+input[type="text" i] {
+  padding-block: 1px;
+  padding-inline: 2px;
+}
+.submit-btn {
+  margin: 7px 50px;
+  border-radius: 23px;
+  background: #3a8ae3;
+}
+.submit-btn button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 14px;
+}
+.submit-btn button span {
+  font-size: 19px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* section easypay css starts from here on  */
+/* section easypay css starts from here on  */
+/* section easypay css starts from here on  */
+/* section easypay css starts from here on  */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(21, 171, 238);
+}
+.payment_sec {
+  display: block;
+  background-color: rgb(21, 171, 238);
+  width: 100%;
+  height: 100%;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 2.5%;
+  position: fixed;
+  width: 100%;
+  height: 4.375rem;
+  left: 0px;
+  top: 0px;
+  background-color: rgb(21, 171, 238);
+  line-height: 4.375rem;
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.content {
+  margin-top: 5.5rem;
+  width: 100%;
+}
+.amountDiv {
+  width: 95%;
+  display: block;
+  margin: auto;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  height: 140px;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+.amountInfo {
+  display: block;
+  float: left;
+  width: 70%;
+  color: rgb(21, 171, 238);
+  margin-left: 1.5rem;
+  margin-top: 35px;
+}
+.amount {
+  font-size: 2rem;
+  line-height: 44px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+.amountInfo p {
+  margin: 0;
+  padding: 0;
+}
+.copyBUt {
+  border: none;
+  background: rgb(21, 171, 238);
+  width: 3.5rem;
+  height: 2rem;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.2rem;
+  display: block;
+  float: right;
+  margin-top: 3.7rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+.paymentContent {
+  background-color: #fff;
+  width: 95%;
+  margin-left: 2.5%;
+  border-radius: 0.3rem;
+  margin-right: 2.5%;
+  margin-top: 1rem;
+  padding-top: 10px;
+  padding-bottom: 1rem;
+}
+.tabBar {
+  width: 100%;
+  height: 1.4375rem;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.contentDiv {
+  width: 95%;
+  display: block;
+  margin: auto;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top: 0.7rem;
+}
+.title {
+  color: rgb(21, 171, 238);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding-top: 0.5rem;
+  line-height: 1.125rem;
+}
+.upiInputDiv {
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  font-size: 0.8125rem;
+  width: 100%;
+  line-height: 2.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+.textHead {
+  display: inline-block;
+  width: 3.75rem;
+  margin-left: 0.625rem;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  float: left;
+}
+.upiInput {
+  margin-left: 1rem;
+  width: 50%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.upiBut {
+  float: right;
+  border: none;
+  background-color: rgb(21, 171, 238);
+  width: 3.75rem;
+  height: 2.5rem;
+  border-radius: 0px 5px 5px 0px;
+  color: #fff;
+  cursor: pointer;
+}
+.upiInputDiv {
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  font-size: 0.8125rem;
+  width: 100%;
+  line-height: 2.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+.paymentDiv {
+  display: inline-block;
+  width: 100%;
+}
+.text {
+  color: rgba(55, 55, 55, 0.5);
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+}
+.hint {
+  color: red;
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+}
+.refnumDiv {
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  font-size: 0.8125rem;
+  width: 95.5%;
+  line-height: 2.5rem;
+  padding-left: 1rem;
+  font-size: 0.875rem;
+  margin-right: 2.5%;
+}
+.refnumBank {
+  left: 40px;
+  width: 80%;
+  padding-left: 5px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+.submitButBank {
+  background-color: rgb(21, 171, 238);
+  border-radius: 0.2rem;
+  border: none;
+  width: 100%;
+  height: 2.75rem;
+  margin-top: 1.5rem;
+}
+.disabled {
+  color: rgba(255, 255, 255, 0.3);
 }
