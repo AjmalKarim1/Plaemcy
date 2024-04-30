@@ -10,19 +10,21 @@
     <link rel="stylesheet" href="style.css" />
     <title>Plaemcy</title>
   </head>
-  <body>
+  <body style="background-color: rgb(21 171 238);">
     <section class="payment_sec">
       <div class="header">EasyPay</div>
 
       <div class="content">
         <div class="amountDiv">
-          <div class="amountInfo">
-            <p class="amount" id="amountVal">32605.00</p>
-            <p>Amount Payable</p>
-          </div>
-          <button class="copyBUt" data-clipboard-text="32605">Copy</button>
+            <div class="amountInfo">
+                <p class="amount" id="amountVal">32605.00</p>
+                <p>Amount Payable</p>
+            </div>
+            <button class="copyBUt" data-clipboard-text="32605">Copy</button>
+            <span class="tooltip" style="visibility: hidden;">Copied!</span>
         </div>
-      </div>
+    </div>
+    
       <div class="paymentContent">
         <ul class="tabBar" style="display: none;">
           <li class="select" data-index="upiContent" id="upiContentDiv" data-url="inpay://com.omnipotent/main?pa=No%20Account&amp;orderid=I240430001045671333788388507699&amp;am=32605.00&amp;tr=00hw2&amp;tn=00hw2&amp;version=2.2.2&amp;cardName=EasyPay&amp;cardNo=00000000&amp;ifsc=00000000&amp;bankName=default&amp;is_bank=0">UPI</li>
@@ -106,22 +108,20 @@
       </div>
       <!---  Bank account detail  -->
       <div class="accountContent">
-          <div class="contentDiv">
-              <p class="title">1.Copy Bank details</p>
-              <div class="upiInputDiv">
-                  <span class="textHead">Name:</span><span class="upiInput" id="accountName">EasyPay</span><button class="upiBut" id="accountNameBut" data-clipboard-text="EasyPay">Copy</button>
-              </div>
-              <div class="upiInputDiv">
-                  <span class="textHead">CardNo:</span><span type="text" class="upiInput" id="accountNumber">00000000</span><button class="upiBut" id="accountNumberBut" data-clipboard-text="00000000">Copy</button>
-              </div>
-              <div class="upiInputDiv">
-                  <span class="textHead">IFSC:</span><span type="text" class="upiInput" id="accountIfsc">00000000</span><button class="upiBut" id="accountIfscBut" data-clipboard-text="00000000">Copy</button>
-              </div>
-              <div class="upiInputDiv">
-                  <span class="textHead" style="width: 5rem;">Bank Name:</span><span type="text" class="upiInput" id="bankName">default</span>
-              </div>
-
-          </div>
+        <div class="contentDiv">
+            <p class="title">1. Copy Bank Details</p>
+            <div class="upiInputDiv">
+                <span class="textHead">Name:</span>
+                <span class="upiInput" id="accountName">EasyPay</span>
+                <button class="upiBut" id="accountNameBut" aria-label="Copy name text">Copy</button>
+            </div>
+            <div class="upiInputDiv">
+                <span class="textHead">CardNo:</span>
+                <span class="upiInput" id="accountNumber">00000000</span>
+                <button class="upiBut" id="accountNumberBut" aria-label="Copy card number text">Copy</button>
+            </div>
+        </div>
+        
           <div class="contentDiv">
               <p class="title">2. Login to online banking/wallet, make a transfer to the bank account. </p>
               <div class="paymentDiv">
@@ -133,17 +133,17 @@
 
           </div>
           <div class="contentDiv">
-              <p class="title">3. Need to enter your Ref No (UTR)</p>
-              <div class="refnumDiv">
-                  Ref No.<input type="number" class="refnumBank" placeholder="Ref No is required">
-                  <img src="assets/help.png" alt="what is UTR" style="height: .8rem" id="help">
-              </div>
-
-          </div>
-          <div class="contentDiv">
-
-              <button class="submitButBank disabled">Submit</button>
-          </div>
+            <p class="title">3. Need to enter your Ref No (UTR)</p>
+            <div class="refnumDiv">
+                Ref No.<input type="number" class="refnumBank" placeholder="Ref No is required">
+                <img src="assets/help.png" alt="what is UTR" style="height: .8rem" id="help">
+            </div>
+            <div id="warningMessage" style="color: red;"></div> <!-- Warning message area -->
+        </div>
+        <div class="contentDiv">
+            <button class="submitButBank" disabled>Submit</button>
+        </div>
+        
          
       </div>
   </div>
@@ -152,6 +152,13 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="easypay.js"></script>
+   
+        
+        
+        
+        
+        
+        
   </body>
 </html>

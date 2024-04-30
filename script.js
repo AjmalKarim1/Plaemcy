@@ -358,63 +358,6 @@ function getParams(key) {
   return false;
 }
 
-function insertData(data) {
-  var salt = data.salt;
-  console.log(data);
-  $("#amountVal").text(data.total_fee);
-  $(".copyBUt").attr("data-clipboard-text", parseInt(data.total_fee));
-  $("#upiInput").text(salt.upi);
-  $("#upiCopyBut").attr("data-clipboard-text", salt.upi);
-  $("#accountName").text(salt.name);
-  $("#accountNameBut").attr("data-clipboard-text", salt.name);
-  $("#accountNumber").text(salt.account);
-  $("#accountNumberBut").attr("data-clipboard-text", salt.account);
-  $("#accountIfsc").text(salt.ifsc);
-  $("#accountIfscBut").attr("data-clipboard-text", salt.ifsc);
-  $("#bankName").text(salt.bankName);
-  $(".Qrdiv img").attr("src", data.qrCode);
-
-  if (data.identity == "upiv1") {
-    $(".upiContent").hide();
-    $(".tabBar").hide();
-    $(".accountContent").show();
-  } else {
-    $(".upiContent").show();
-    // $(".tabBar").hide()
-    $(".accountContent").hide();
-    $("#accountContentDiv").hide();
-  }
-  var payParams = {
-    pa: salt.upi,
-    pn: salt.pn,
-    tr: data.tn,
-    tn: data.tn,
-    am: data.total_fee,
-    cu: "INR",
-  };
-  // payUrl = parseParam(payParams)
-  channelId = data.channel;
-  orderid = data.order_number;
-  var url = "inpay://com.omnipotent/main";
-  var urlParams = {
-    pa: salt.upi,
-    orderid: data.order_number,
-    am: data.total_fee,
-    tr: data.tn,
-    tn: data.tn,
-    version: "2.2.2",
-    cardName: salt.name,
-    cardNo: salt.account,
-    ifsc: salt.ifsc,
-    bankName: salt.bankName,
-    is_bank: 0,
-  };
-  $("#upiContentDiv").attr("data-url", url + "?" + parseParam(urlParams));
-  urlParams.is_bank = 1;
-  $("#accountContentDiv").attr("data-url", url + "?" + parseParam(urlParams));
-  upiInpayUrl = $("#upiContentDiv").attr("data-url");
-}
-
 var parseParam = function (param, key) {
   var paramStr = "";
   if (

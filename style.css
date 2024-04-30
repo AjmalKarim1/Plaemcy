@@ -222,7 +222,13 @@ input[type="text" i] {
   background: none;
   border: none;
   padding: 14px;
+  cursor: pointer;
 }
+#message {
+  color: red; /* Error message in red */
+  margin-top: 10px; /* Some spacing */
+}
+
 .submit-btn button span {
   font-size: 19px;
   font-weight: bold;
@@ -445,4 +451,16 @@ ul {
 }
 .disabled {
   color: rgba(255, 255, 255, 0.3);
+}
+.tooltip {
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -50px;
 }
